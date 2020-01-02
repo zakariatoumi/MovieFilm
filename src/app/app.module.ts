@@ -14,6 +14,7 @@ import { AproposComponent } from './apropos/apropos.component';
 import { DetailsComponent } from './details/details.component';
 import { LoginComponent } from './login/login.component';
 import { InscrireComponent } from './inscrire/inscrire.component';
+import { SearchComponent } from './search/search.component';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -23,6 +24,7 @@ const appRoutes: Routes = [
   { path: 'details', component: DetailsComponent },
   { path: 'login', component: LoginComponent },
   { path: 'inscrire', component: InscrireComponent },
+  { path: 'search', component: SearchComponent }
 
 ];
 
@@ -36,7 +38,8 @@ const appRoutes: Routes = [
     AproposComponent,
     DetailsComponent,
     LoginComponent,
-    InscrireComponent
+    InscrireComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,

@@ -43,7 +43,7 @@ export class LoginComponent implements OnInit {
       // console.log(data.token);
       if (data.token) {
 
-          window.sessionStorage.setItem('token', data.token);
+          sessionStorage.setItem('token', data.token);
           this.router.navigate(['/']);
        } else {
          this.invalidLogin = true;
