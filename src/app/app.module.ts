@@ -21,7 +21,7 @@ const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'films', component: FilmsComponent },
   { path: 'apropos', component: AproposComponent },
-  { path: 'details', component: DetailsComponent },
+  { path: 'details/:id', component: DetailsComponent },
   { path: 'login', component: LoginComponent },
   { path: 'inscrire', component: InscrireComponent },
   { path: 'search', component: SearchComponent }

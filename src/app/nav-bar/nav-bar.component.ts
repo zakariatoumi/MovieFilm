@@ -10,7 +10,7 @@ import { FormGroup } from '@angular/forms';
 })
 export class NavBarComponent implements OnInit {
   token: string;
-  Email: string;
+  nom: string;
   searchForm: FormGroup;
 
   constructor(private router: Router,
@@ -18,7 +18,7 @@ export class NavBarComponent implements OnInit {
 
   ngOnInit() {
     this.token =  sessionStorage.getItem('token');
-    console.log(this.token);
+    this.nom =  sessionStorage.getItem('nom');
     if (!this.token) {
       this.router.navigate(['login']);
     }

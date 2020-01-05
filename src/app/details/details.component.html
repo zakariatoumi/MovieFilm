@@ -4,16 +4,35 @@
 
         <div class="row">
                 <div class="col-12 col-sm-6 col-md-8 text-white">
-                        <iframe height="400px" class="card-img-top owl-video"  src="https://www.youtube.com/embed/UEqmxbwLrtE"></iframe>
+                        <iframe height="400px" class="card-img-top owl-video"  src="film.lien_film"></iframe>
                 </div>
                 <div class="col-12 col-md-4 text-white">
-                    <h3 class="smoll">Titre de filme</h3>
-                    <p class="smoll">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus veniam officiis beatae. Quam, ipsum doloribus. Earum similique iusto laborum. Veritatis voluptatem eum, deleniti perferendis dolore distinctio laboriosam laborum vel cum.</p>
+                    <h3 class="smoll">{{film.titre_film}}</h3>
+                    <p class="smoll">{{film.pseudo}}</p>
+                    <p class="smoll">{{film.description}}</p>
+                    <p class="smoll">{{film.libelle}}</p>
                     <a class="btn btn-danger smoll" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
                             <i class="fas fa-download"></i> Telecharger
                     </a>
                 </div>
         </div>
+
+        <div class="row mt-5 bg-dark pt-5 pb-5">
+          <div class="col-12 col-sm-6 col-md-8 text-white" *ngFor="let commantaire of commantaires">
+                  <p class="font-weight-bold" style="font-size: 20px;">{{commantaire.nom}} {{commantaire.prenom}}</p>
+                 <p>{{commantaire.text_commantaire}}</p>
+                 <figcaption class="figure-caption text-right text-white">{{commantaire.Date}}</figcaption>
+                 <hr>
+          </div>
+
+          <div class="col-12 col-md-4 text-white">
+            <textarea name="" id="" cols="30" rows="" class="form-control" name="textCommantaire" formControlName="textCommantaire"></textarea>
+            <button type="submit" class="btn btn-danger">Commanter</button>
+          </div>
+
+  </div>
+
+
 
 </div>
 <br>

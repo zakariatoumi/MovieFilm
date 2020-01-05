@@ -1,1 +1,22 @@
-<p>search works!</p>
+<div class="table-responsive-sm">
+  <table class="table table-bordered table-hover table-dark" *ngIf="films.length > 0">
+      <thead>
+        <tr>
+
+          <th scope="col">Titre Film</th>
+          <th scope="col">Pseudo Film</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let fil of films">
+
+          <td>{{fil.titre_film}}</td>
+          <!-- <iframe [src]="sanitizer.bypassSecurityTrustResourceUrl(fil.lien_film)" height="600" width="1000"></iframe> -->
+          <td>{{fil.pseudo}}</td>
+
+        </tr>
+
+      </tbody>
+    </table>
+
+  </div>

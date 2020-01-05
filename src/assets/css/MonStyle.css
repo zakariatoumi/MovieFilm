@@ -1,6 +1,6 @@
-body {
+/* body {
     background-color: black;
-}
+} */
 
 /******************************Style de slider de header**********************************/
 
@@ -420,13 +420,13 @@ section .section-title {
 
 
 
-/****************************Media Qeuries*******************************/  
+/****************************Media Qeuries*******************************/
 
 
 
 @media only screen and (max-width: 414px) {
   .item-video {
-    
+
     margin-left: 90px;
 
   }
@@ -440,7 +440,7 @@ section .section-title {
     margin-bottom: 10%;
   }
   .item-video1 {
-    
+
     margin-left: 80px;
     margin-bottom: 10%;
     text-align: center;
@@ -448,14 +448,14 @@ section .section-title {
   }
 }
 
-  
-  
+
+
   @media only screen and (max-width: 411px) {
     .item-video {
-      
+
       margin-left: 85px;
       text-align: center;
-   
+
     }
     .FilmPlusVu{
       margin-left: 25%;
@@ -465,17 +465,17 @@ section .section-title {
     .centre1{
       margin-left: 110px;
       margin-bottom: 10%;
-      
+
     }
     }
 
-    
+
     @media only screen and (max-width: 375px) {
       .item-video {
-        
+
         margin-left: 70px;
-        
-    
+
+
       }
       .FilmPlusVu{
         margin-left: 28px;
@@ -487,19 +487,19 @@ section .section-title {
         margin-bottom: 10%;
       }
       .item-video1 {
-        
+
         margin-left: 60px;
         margin-bottom: 10%;
         text-align: center;
-        
-    
+
+
       }
     }
 
 
     @media only screen and (max-width: 360px) {
       .item-video {
-        
+
         margin-left: 63px;
         margin-bottom: 10%;
         text-align: center;
@@ -512,21 +512,18 @@ section .section-title {
       .centre1{
         margin-left: 98px;
         margin-bottom: 10%;
-        
+
       }
-      .smoll{
-        
-        
-      }
+
       }
 
 
       @media only screen and (max-width: 320px) {
         .item-video {
-          
+
           margin-left: 48px;
-          
-      
+
+
         }
         .FilmPlusVu{
           margin-left: 1px;
@@ -538,7 +535,7 @@ section .section-title {
           margin-bottom: 10%;
         }
         .item-video1 {
-          
+
           margin-left: 38px;
           margin-bottom: 10%;
           text-align: center;
@@ -546,6 +543,29 @@ section .section-title {
       }
 
 
-   
+/*-------------------footer-----------------------*/
+html{
+  height: 100%;
+}
+body{
+  min-height: 100%;
+  padding-bottom: 30rem;
+  position: relative;
+  background-color: black;
+}
+#footer{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+#copy{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
 
-     
+
+
+

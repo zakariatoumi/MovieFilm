@@ -7,7 +7,9 @@ export const environment = {
   BASE_API_URL: 'http://localhost:4432/',
   APIs: {
     createUser: 'MovieFilm/Api_Site_Officiel_MovieFilm/users/register_SiteOffice.php',
-    loginUser: 'MovieFilm/Api_Site_Officiel_MovieFilm/users/login_SiteOffice.php'
+    loginUser: 'MovieFilm/Api_Site_Officiel_MovieFilm/users/login_SiteOffice.php',
+    listFilm: 'MovieFilm/Api_Site_Officiel_MovieFilm/films/search_SiteOffice.php',
+    RecentFilm: 'MovieFilm/Api_Site_Officiel_MovieFilm/films/Film_recent.php'
   }
 };
 

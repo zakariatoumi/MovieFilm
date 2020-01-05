@@ -20,4 +20,6 @@ export class UserService {
   login(loginData): Observable<ApiResponse> {
     return this.http.post<ApiResponse>(env.BASE_API_URL + env.APIs.loginUser, loginData);
   }
+
+
 }

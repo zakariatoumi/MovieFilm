@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { SearchService } from '../services/search.service';
+import { Film } from '../Model/film';
 
 @Component({
   selector: 'app-search',
@@ -6,10 +8,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent implements OnInit {
+  films = [];
 
-  constructor() { }
+  constructor(private searchService: SearchService) { }
 
   ngOnInit() {
+    // this.searchService.cherche().subscribe(res => {
+
+    // });
   }
+
+
 
 }
