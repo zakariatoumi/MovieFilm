@@ -15,6 +15,8 @@ import { DetailsComponent } from './details/details.component';
 import { LoginComponent } from './login/login.component';
 import { InscrireComponent } from './inscrire/inscrire.component';
 import { SearchComponent } from './search/search.component';
+import { YoutubePipe } from './pipe/youtube.pipe';
+import { CarouselModule } from 'ngx-owl-carousel-o';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -39,7 +41,8 @@ const appRoutes: Routes = [
     DetailsComponent,
     LoginComponent,
     InscrireComponent,
-    SearchComponent
+    SearchComponent,
+    YoutubePipe
   ],
   imports: [
     BrowserModule,
@@ -49,7 +52,8 @@ const appRoutes: Routes = [
     ),
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    CarouselModule
   ],
   providers: [{provide: APP_BASE_HREF, useValue: '/'}],
   bootstrap: [AppComponent]

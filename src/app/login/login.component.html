@@ -4,7 +4,7 @@
 <br>
 <div class="container">
     <div class="card bg-dark card-container">
-        <!-- <img class="profile-img-card" src="//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120" alt="" /> -->
+
         <img id="profile-img" class="profile-img-card" src="assets/img/avatar_2x.png" />
 
         <p id="profile-name" class="profile-name-card"></p>
@@ -22,17 +22,10 @@
             <input type="password" formControlName="password" id="inputPassword" class="form-control" placeholder="Mode Passe" required autocomplete="off">
             <div class="error" *ngIf="loginForm.controls['password'].hasError('required') && loginForm.controls['password'].touched" class="alert alert-danger">Please enter password</div>
 
-            <!-- <div id="remember" class="checkbox">
-                <label class="text-light">
-                    <input type="checkbox" value="remember-me"> Remember me
-                </label>
-            </div> -->
             <button class="btn btn-danger" [disabled]="loginForm.invalid">Connecte</button>
         </form><!-- /form -->
-        <!-- <a href="#" class="forgot-password">
-            Forgot the password?
-        </a> -->
-        <a routerLink="/Register" class="forgot-password">
+
+        <a routerLink="/inscrire" class="forgot-password">
             Inscription
         </a>
     </div><!-- /card-container -->

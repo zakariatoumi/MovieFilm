@@ -14,6 +14,8 @@ export class DetailsComponent implements OnInit {
   film: Film[];
   id: any;
   commantaires: Commantaire[];
+  token: string;
+
 
   constructor(private filmService: FilmService,
               private router: Router,
@@ -24,6 +26,11 @@ export class DetailsComponent implements OnInit {
     this.id = this.route.snapshot.params.id;
     this.DetailsFilmByID(this.id);
     this.DetailsCommantaireByID(this.id);
+
+    this.token =  sessionStorage.getItem('token');
+    if (!this.token) {
+    this.router.navigate(['login']);
+  }
   }
 
   DetailsFilmByID(id: any) {
@@ -51,5 +58,7 @@ export class DetailsComponent implements OnInit {
       }
       );
   }
+
+
 
 }

@@ -8,14 +8,12 @@ import { Film } from '../Model/film';
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent implements OnInit {
-  films = [];
+  films: Film;
 
   constructor(private searchService: SearchService) { }
 
   ngOnInit() {
-    // this.searchService.cherche().subscribe(res => {
 
-    // });
   }
 
 
