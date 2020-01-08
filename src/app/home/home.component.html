@@ -84,7 +84,7 @@
                             <iframe class="card-img image" [src]="listfilms.lien_film | youtube"></iframe>
                             <div class="card-body">
                               <h5 class="card-title">{{listfilms.titre_film}}</h5>
-                              <p class="card-text">{{listfilms.description}}</p>
+                              <p class="card-text d-inline-block text-truncate" style="max-width: 150px;">{{listfilms.description}}</p>
                               <a [routerLink]="['/details', listfilms.id]" class="btn btn-danger">Detail</a>
                             </div>
                           </div>
@@ -105,7 +105,7 @@
                             <iframe class="card-img image" [src]="listfilmComedies.lien_film | youtube"></iframe>
                             <div class="card-body">
                               <h5 class="card-title">{{listfilmComedies.titre_film}}</h5>
-                              <p class="card-text">{{listfilmComedies.description}}</p>
+                              <p class="card-text d-inline-block text-truncate" style="max-width: 150px;">{{listfilmComedies.description}}</p>
                               <a [routerLink]="['/details', listfilmComedies.id]" class="btn btn-danger">Detail</a>
                             </div>
                           </div>
@@ -126,7 +126,7 @@
                             <iframe class="card-img image" [src]="listfilmFantastiques.lien_film | youtube"></iframe>
                             <div class="card-body">
                               <h5 class="card-title">{{listfilmFantastiques.titre_film}}</h5>
-                              <p class="card-text">{{listfilmFantastiques.description}}</p>
+                              <p class="card-text d-inline-block text-truncate" style="max-width: 150px;">{{listfilmFantastiques.description}}</p>
                               <a [routerLink]="['/details', listfilmFantastiques.id]" class="btn btn-danger">Detail</a>
                             </div>
                           </div>
@@ -149,7 +149,7 @@
                             <div class="col-sm-6">
                               <div class="card-body-right">
                                 <h4 class="card-title">{{film.titre_film}}</h4>
-                                <p class="card-text">{{film.description}}</p>
+                                <p class="card-text d-inline-block text-truncate" style="max-width: 100px;">{{film.description}}</p>
                                 <a [routerLink]="['/details', film.id]" class="btn btn-danger">Detail</a>
                               </div>
                                </div>

@@ -2,7 +2,13 @@
 <div class="col-md-8 offset-md-2 text-black-50 mb-5">
   <span class="anchor" id="formUserEdit"></span>
   <hr class="">
+<div *ngIf="status" class="alert alert-danger">
+  {{message}}
+</div>
 
+<div *ngIf="Success" class="alert alert-success">
+  {{Success}}
+</div>
   <!-- form user info -->
   <div class="card bg-dark text-light card-outline-secondary">
       <div class="card-header" style="background-color: rgb(102, 102, 102);">

@@ -1,22 +1,68 @@
-<div class="table-responsive-sm">
-  <table class="table table-bordered table-hover table-dark">
-      <thead>
-        <tr>
+<div class="container mt-5">
 
-          <th scope="col">Titre Film</th>
-          <th scope="col">Pseudo Film</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
+<div class="form-row">
+  <div class="col-auto my-1">
+  <input class="form-control" type="search" name="search" #search placeholder="Recherche..." aria-label="Search">
+</div>
+<div class="col-auto my-1">
+  <button class="btn btn-dark" (click)="OnSubmit(search.value)">Recherche</button>
+</div>
+</div>
 
-          <td></td>
+<ng-container *ngIf="recherche.length > 0; else elseTemplate">
+  <div class="table-responsive-sm mt-4">
+    <table class="table table-bordered table-hover table-dark">
+        <thead>
+          <tr>
+            <th scope="col">Lien Film</th>
+            <th scope="col">Titre Film</th>
+            <th scope="col">Pseudo Film</th>
+            <th scope="col">Description Film</th>
+            <th scope="col">Action</th>
 
-          <td></td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let recherches of recherche">
+            <td>
+              <iframe
 
-        </tr>
+                    [src]="recherches.Lien_film | youtube"
+                    frameborder="0"
+                    scrolling="yes"
+                    allowfullscreen>
+                  </iframe>
+            </td>
 
-      </tbody>
-    </table>
+            <td>
+              {{recherches.Titre_film}}
+            </td>
 
+            <td>
+              {{recherches.Pseudo}}
+            </td>
+
+            <td>
+              {{recherches.Description}}
+            </td>
+
+            <td>
+              <a [routerLink]="['/details', recherches.id]" class="btn btn-danger">Detail</a>
+            </td>
+
+          </tr>
+
+        </tbody>
+      </table>
+
+    </div>
+</ng-container>
+<ng-template #elseTemplate>
+  <div class="alert alert-primary" role="alert">
+    Cette recherche ne trouve pas
   </div>
+</ng-template>
+
+
+
+</div>

@@ -15,12 +15,15 @@
         <li class="nav-item">
             <a class="nav-link" routerLink="/apropos">A propos</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/search">Recherche</a>
+          </li>
 
       </ul>
-      <div class="form-inline my-2 my-lg-0">
+      <!-- <div class="form-inline my-2 my-lg-0">
         <input class="form-control mr-sm-2" type="search" name="search" #search placeholder="Recherche..." aria-label="Search">
         <button class="btn btn-dark my-2 my-sm-0" (click)="OnSubmit(search.value)">Recherche</button>
-      </div>
+      </div> -->
       <ul class="navbar-nav mr-5">
         <li class="nav-item dropdown">
           <ng-container *ngIf="token; else elseTemplate">

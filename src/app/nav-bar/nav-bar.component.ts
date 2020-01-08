@@ -29,11 +29,11 @@ export class NavBarComponent implements OnInit {
     this.router.navigate(['login']);
   }
 
-  OnSubmit(search) {
-    this.searchService.cherche(search).subscribe(res => {
-      this.router.navigate(['/search']);
-    });
-  }
+  // OnSubmit(search) {
+  //   this.searchService.cherche(search).subscribe(res => {
+  //     this.router.navigate(['/search']);
+  //   });
+  // }
 
 
 
