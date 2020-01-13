@@ -52,7 +52,7 @@ export class InscrireComponent implements OnInit {
         this.message = data.error;
       } else if (data.success) {
         this.Success = data.success;
-        // this.router.navigate(['login']);
+        this.router.navigate(['login']);
     }
     });
   }
