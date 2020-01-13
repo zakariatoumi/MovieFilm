@@ -26,6 +26,10 @@
                       <p class="font-weight-bold" style="color: #dc3545;">Categorie Film : </p>
                     </span>
                     <p class="smoll">{{film.libelle}}</p>
+                    <span style="float: left;">
+                      <p class="font-weight-bold" style="color: #dc3545;">Date Film : </p>
+                    </span>
+                    <p class="smoll">{{film.Date}}</p>
 
                     <a class="btn btn-danger smoll" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
                             <i class="fas fa-download"></i> Telecharger
@@ -42,9 +46,14 @@
           </div>
 
           <div class="col-12 col-md-4 text-white">
-            <form action="">
-            <textarea name="" id="" cols="30" rows="" class="form-control" name="textCommantaire"></textarea>
-            <button type="submit" class="btn btn-danger">Commanter</button>
+            <form action="" [formGroup]="addForm">
+            <textarea name="" id="" cols="30" rows="" [ngClass]="{ 'is-invalid': IsFiled && f.textCommantaire.errors }" class="form-control" name="textCommantaire" formControlName="textCommantaire"></textarea>
+            <div *ngIf="IsFiled && f.textCommantaire.errors" class="invalid-feedback">
+              <div *ngIf="f.textCommantaire.errors" class="cross-validation-error-message alert alert-danger">
+                Entrer votre Commantaire
+              </div>
+              </div>
+            <input type="button" class="btn btn-danger font-weight-bold" value="Commanter" (click)="onSubmit()">
           </form>
           </div>
 

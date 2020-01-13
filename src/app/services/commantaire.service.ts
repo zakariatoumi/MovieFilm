@@ -15,4 +15,9 @@ export class CommantaireService {
     // tslint:disable-next-line: max-line-length
     return this.http.get<Commantaire[]>(env.BASE_API_URL + 'MovieFilm/Api_Site_Officiel_MovieFilm/commantaire/Commantaire_Film_ByID_SiteOffice.php?id=' + id).pipe(map(res => res || []));
   }
+
+  addComment(commantaire: Commantaire) {
+    // tslint:disable-next-line: max-line-length
+    return this.http.post<Commantaire[]>(env.BASE_API_URL + 'MovieFilm/Api_Site_Officiel_MovieFilm/commantaire/Add_Commantaire_SiteOffice.php', commantaire);
+  }
 }

@@ -4,6 +4,7 @@ import { FilmService } from '../services/film.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { CommantaireService } from '../services/commantaire.service';
 import { Commantaire } from '../Model/commantaire';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-details',
@@ -15,12 +16,14 @@ export class DetailsComponent implements OnInit {
   id: any;
   commantaires: Commantaire[];
   token: string;
-
+  addForm: FormGroup;
+  IsFiled = false;
 
   constructor(private filmService: FilmService,
               private router: Router,
               private route: ActivatedRoute,
-              private commantaireService: CommantaireService) { }
+              private commantaireService: CommantaireService,
+              private formBuilder: FormBuilder) { }
 
   ngOnInit() {
     this.id = this.route.snapshot.params.id;
@@ -31,6 +34,12 @@ export class DetailsComponent implements OnInit {
     if (!this.token) {
     this.router.navigate(['login']);
   }
+
+    this.addForm = this.formBuilder.group({
+    id: [],
+    textCommantaire: ['', [Validators.required]],
+  });
+
   }
 
   DetailsFilmByID(id: any) {
@@ -51,7 +60,6 @@ export class DetailsComponent implements OnInit {
       (data: Commantaire[]) => {
 
         this.commantaires = data;
-
     },
     err => {
       console.log(err);
@@ -59,6 +67,23 @@ export class DetailsComponent implements OnInit {
       );
   }
 
+  get f() {
+    return this.addForm.controls;
+  }
 
+  onSubmit() {
+
+    this.IsFiled = true;
+    if (this.addForm.valid) {
+    this.commantaireService.addComment(this.addForm.value)
+    .subscribe(
+      data => {
+        this.DetailsCommantaireByID(this.id);
+        // this.router.navigate(['/details']);
+      }
+    );
+    }
+
+  }
 
 }
