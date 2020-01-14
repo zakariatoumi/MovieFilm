@@ -22,7 +22,8 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
 const appRoutes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full'},
   { path: 'home', component: HomeComponent },
-  { path: 'films', component: FilmsComponent },
+  { path: 'films', component: FilmsComponent},
+  { path: 'list_films/:id', component: FilmsComponent},
   { path: 'apropos', component: AproposComponent },
   { path: 'details/:id', component: DetailsComponent },
   { path: 'login', component: LoginComponent },

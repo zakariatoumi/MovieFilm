@@ -1,4 +1,4 @@
 export class Categorie {
-  id: any;
+  Id_categorie: any;
   libelle: string;
 }
