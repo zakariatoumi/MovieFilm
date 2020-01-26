@@ -14,7 +14,7 @@
       <div class="tab-content" id="nav-tabContent">
         <div class="tab-pane fade show" *ngFor="let categorie of categories" id="list-home{{categorie.Id_categorie}}" role="tabpanel" aria-labelledby="list-home-list" style="color: blanchedalmond;">
 
-                <div class="row item-video1">
+                <div class="row item-video1" *ngIf="films.length > 0">
                   <div class="col mt-3" *ngFor="let film of films">
                       <div class="card" style="width: 12rem;">
 
@@ -25,9 +25,13 @@
                             <a [routerLink]="['/details', film.Id_film]" class="btn btn-danger">Detail</a>
                           </div>
                         </div>
-                  </div>
 
+
+                  </div>
                 </div>
+                    <div class="alert alert-primary mt-5 text-center font-weight-bold" role="alert" *ngIf="!(films.length > 0)">
+                      data vide
+                    </div>
 
 
         </div>
